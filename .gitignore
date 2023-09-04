@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+proj/
+# Local development settings
+instance/
+*.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+
+# Flask specific
+*.pyc
+__pycache__/
+instance/
+.pytest_cache/
+coverage/
+htmlcov/
+.pytest_cache/
+.coverage
+.coverage.*

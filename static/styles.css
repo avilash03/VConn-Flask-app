@@ -1,0 +1,105 @@
+/* Styles for the profile container */
+.profile-container {
+    background-color: #000; /* Dark background */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    font-family: 'Roboto', sans-serif; /* Futuristic font */
+    color: #fff; /* Text color */
+    text-align: left; /* Left-align text */
+    position: relative; /* Relative positioning for the border */
+    border: 2px solid transparent; /* Transparent border for animation */
+}
+
+/* Neon border animation */
+.profile-container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    border: 2px solid transparent; /* Transparent border for animation */
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        border-color: #00ccff; /* Neon blue color */
+    }
+    100% {
+        border-color: #ff66ff; /* Neon pink color (you can adjust this) */
+    }
+}
+
+/* Styles for the profile itself */
+.profile {
+    font-size: 14px; /* Default font size for details */
+}
+
+/* Styles for profile sections */
+.profile-section {
+    margin: 10px 0;
+}
+
+/* Styles for labels */
+.profile-label {
+    font-size: 18px; /* Larger font size for labels */
+    font-weight: bold;
+    color: #00ccff; /* Neon blue color for labels */
+}
+
+/* Styles for values */
+.profile-value {
+    font-size: 16px; /* Smaller font size for values */
+}
+
+/* Style for the search form */
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for the search button */
+button {
+    padding: 10px 20px;
+    background-color: #00ccff; /* Neon blue color for button */
+    color: #fff; /* Text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the search button */
+button:hover {
+    background-color: #0099cc; /* Darker blue color on hover */
+}
+
+/* Style for headings */
+h1, h2 {
+    text-align: center;
+    color: #00ccff; /* Neon blue color for headings */
+}
+
+/* Style for the query input field */
+#query {
+    width: 400px; /* Longer input field */
+    padding: 10px;
+    border: 2px solid #00ccff; /* Neon blue border */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff; /* Text color */
+    background-color: #111; /* Dark background for input */
+}
+
+/* Style for the main background */
+body {
+    background-color: #000; /* Dark background */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add more futuristic styles as needed */

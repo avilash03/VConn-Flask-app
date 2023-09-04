@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    
+    <!-- Add favicon -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/r0Vf77L/icon.jpg">
+</head>
+<body>
+    <img src="https://i.ibb.co/r0Vf77L/icon.jpg" alt="icon" style="position: absolute; top: 18px; left: 340px; z-index: 1; width: 175px; border-radius: 10px;">
+
+
+    <h1>Vconn Search</h1>
+    <form method="POST">
+        <label for="query"></label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit" style="border-radius: 10px;">Search</button>
+    </form>
+    {% if query %}
+    <h2>Search results for "{{ query }}":</h2>
+    {% for record in results %}
+    <div class="profile-container">
+        <div class="profile">
+            <div class="profile-section">
+                <div class="profile-label">Reg No:</div>
+                <div class="profile-value">{{ record[0] }}</div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-label">Name:</div>
+                <div class="profile-value">{{ record[1] }}</div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-label">Contact Email:</div>
+                <div class="profile-value">{{ record[2] }}</div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-label">Dept:</div>
+                <div class="profile-value">{{ record[3] }}</div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-label">Year:</div>
+                <div class="profile-value">{{ record[4] }}</div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-label">Hobbies and Interests:</div>
+                <div class="profile-value">{{ record[5] }}</div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-label">Academic:</div>
+                <div class="profile-value">{{ record[6] }}</div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-label">Sleep Time:</div>
+                <div class="profile-value">{{ record[7] }}</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
