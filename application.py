@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 from info import vector_search
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@application.route("/", methods=["GET", "POST"])
 def search():
     if request.method == "POST":
         input_text = request.form["query"]
@@ -25,4 +25,4 @@ def search():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+   application.run()
